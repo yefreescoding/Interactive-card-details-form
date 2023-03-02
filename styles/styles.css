@@ -1,0 +1,88 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  box-sizing: border-box;
+  border: 1px grey solid;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 5%;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  place-content: center;
+}
+
+div.cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+div.cards-section div.front-face-card {
+  align-self: flex-start;
+  position: relative;
+  text-align: center;
+}
+div.cards-section div.front-face-card img {
+  width: 100%;
+  height: 100%;
+}
+div.cards-section div.front-face-card div.card-numbers {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div.cards-section div.front-face-card div.card-name {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+div.cards-section div.front-face-card div.card-date {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+div.cards-section div.back-face-card {
+  align-self: flex-start;
+  position: relative;
+  text-align: center;
+  align-self: flex-end;
+}
+div.cards-section div.back-face-card img {
+  width: 100%;
+  height: 100%;
+}
+div.cards-section div.back-face-card div {
+  position: absolute;
+  top: 49%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+}
+
+div.form-section {
+  padding: 0 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.form-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em 0;
+}/*# sourceMappingURL=styles.css.map */

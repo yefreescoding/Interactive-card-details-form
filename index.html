@@ -17,51 +17,71 @@
         <img src="images/bg-card-front.png" alt="">
         <div class="card-numbers">0000 0000 0000 0000</div>
         <div class="card-name">Jane Appleseed</div>
-        <div class="card-date">00/00</div>
+        <div class="card-date month">00</div>
+        <div class="card-date year">00</div>
       </div>
       <div class="back-face-card">
         <img src="images/bg-card-back.png" alt="">
-        <div>000</div>
+        <div class="cvc-output">000</div>
       </div>
     </div>
     <!--Right section of the page. The form section-->
     <div class="form-section">
-      <form action="" method="get">
+      <form action="completed-process.html" method="get">
         <div>
-          <div>Cardholder Name</div>
-          <input type="text" placeholder="e.g. Jane Appleseed">
+          <label>Cardholder Name</label>
+          <input class="card-holder-name" type="text" placeholder="e.g. Jane Appleseed">
         </div>
         <div>
-          <div>Card Number</div>
-          <input type="number" placeholder="e.g. 1234 5678 9123 0000">
+          <label>Card Number</label>
+          <input class="card-number-input" type="text" maxlength="20" placeholder="e.g. 1234 5678 9123 0000">
         </div>
-        <div>
-          <div>
-            <div>Exp. Date (MM/YY)</div>
-            <input type="number" placeholder="MM">
-            <input type="number" placeholder="YY">
+        <div class="date-cvc">
+          <div class="exp-date">
+            <label>Exp. Date (MM/YY)</label>
+            <div>
+              <input class="card-month" type="text" placeholder="MM" maxlength="2">
+              <input class="card-year" type="text" placeholder="YY" maxlength="2">
+            </div>
           </div>
           <div>
-            <div>CVC</div>
-            <input type="number" placeholder="e.g. 123">
+            <label>CVC</label>
+            <input class="cvc" type="text" placeholder="e.g. 123" maxlength="3">
           </div>
         </div>
         <div>
-          <button type="submit">Confirm</button>
+          <button type="submit" value="send">Confirm</button>
         </div>
       </form>
     </div>
   </main>
-  <!-- Completed state start -->
-  <div>
-    <img src="" alt="">
-    <div class="thanks-text">Thank you!</div>
-    <p>We've added your card details</p>
-    <div class="button-continue">
-      <button>Continue</button>
-    </div>
-  </div>
-  
+
+
+
+
+
+
+
+
+  <script>
+    document.querySelector('.card-number-input').oninput = () =>{
+      document.querySelector('.card-numbers').innerText = document.querySelector('.card-number-input').value;
+    }
+    document.querySelector('.card-holder-name').oninput = () =>{
+      document.querySelector('.card-name').innerText = document.querySelector('.card-holder-name').value;
+    }
+    document.querySelector('.card-month').oninput = () =>{
+      document.querySelector('.month').innerText = document.querySelector('.card-month').value;
+    }
+    document.querySelector('.card-year').oninput = () =>{
+      document.querySelector('.year').innerText = document.querySelector('.card-year').value;
+    }
+    document.querySelector('.cvc').oninput = () =>{
+      document.querySelector('.cvc-output').innerText = document.querySelector('.cvc').value;
+    }
+    
+  </script>
+  <!-- Completed state start --> 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

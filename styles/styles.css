@@ -218,4 +218,34 @@ div.form-section form div button:hover {
     justify-content: space-between;
     gap: 1em 0;
   }
+}
+div.complete-section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.3em;
+}
+div.complete-section div.thanks {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+div.complete-section p {
+  margin: 0;
+  color: hsl(279, 6%, 55%);
+}
+div.complete-section button.button-continue {
+  width: 20em;
+  background: linear-gradient(45deg, hsl(278, 68%, 11%), hsl(279, 6%, 55%));
+  padding: 10px;
+  font-size: 0.9em;
+  color: hsl(0, 0%, 100%);
+  border-radius: 6px;
+  border: 1px solid hsl(278, 68%, 11%);
+  cursor: pointer;
+  transition: all 0.23s linear;
+}
+div.complete-section button.button-continue:hover {
+  letter-spacing: 2px;
+  opacity: 0.8;
 }/*# sourceMappingURL=styles.css.map */

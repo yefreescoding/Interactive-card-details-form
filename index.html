@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/styles.css">
   <title>Frontend Mentor | Interactive card details form</title>
@@ -27,60 +27,53 @@
     </div>
     <!--Right section of the page. The form section-->
     <div class="form-section">
-      <form action="completed-process.html" method="get">
+      <form name="card-payment-form" action="#" method="post" autocomplete="off">
         <div>
           <label>Cardholder Name</label>
-          <input class="card-holder-name" type="text" placeholder="e.g. Jane Appleseed">
+          <input name="name" class="card-holder-name input-error" type="text" placeholder="e.g. Jane Appleseed">
+          <span class="error name-error"></span>
         </div>
         <div>
-          <label>Card Number</label>
-          <input class="card-number-input" type="text" maxlength="20" placeholder="e.g. 1234 5678 9123 0000">
+          <label>Card Number <span></span></label>
+          <input name="card" class="card-number-input" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="e.g. 1234-5678-9123-0000">
+          <p class="error number-error"></p>
         </div>
         <div class="date-cvc">
           <div class="exp-date">
             <label>Exp. Date (MM/YY)</label>
             <div>
-              <input class="card-month" type="text" placeholder="MM" maxlength="2">
-              <input class="card-year" type="text" placeholder="YY" maxlength="2">
+              <input name="month" class="card-month" type="text" placeholder="MM" maxlength="2">
+              <input name="year" class="card-year" type="text" placeholder="YY" maxlength="2">
             </div>
+            <p class="error date-error"></p>
           </div>
           <div>
             <label>CVC</label>
-            <input class="cvc" type="text" placeholder="e.g. 123" maxlength="3">
+            <input name="cvcname" class="cvc" type="text" placeholder="e.g. 123" maxlength="3">
+            <p class="error cvc-error"></p>
           </div>
         </div>
         <div>
-          <button type="submit" value="send">Confirm</button>
+          <button type="submit" name="register-submition">Confirm</button>
+          <p class="error register-error"></p>
         </div>
       </form>
     </div>
+    <div class="complete-section">
+      <img src="images/icon-complete.svg" alt="complete icon">
+      <div class="thanks">Thank you!</div>
+      <p>We've added your card details</p>
+      <div>
+        <button class="button-continue">Continue</button>
+      </div>
+    </div>
   </main>
-
-
-
-
-  <script>
-    document.querySelector('.card-number-input').oninput = () =>{
-      document.querySelector('.card-numbers').innerText = document.querySelector('.card-number-input').value;
-    }
-    document.querySelector('.card-holder-name').oninput = () =>{
-      document.querySelector('.card-name').innerText = document.querySelector('.card-holder-name').value;
-    }
-    document.querySelector('.card-month').oninput = () =>{
-      document.querySelector('.month').innerText = document.querySelector('.card-month').value;
-    }
-    document.querySelector('.card-year').oninput = () =>{
-      document.querySelector('.year').innerText = document.querySelector('.card-year').value;
-    }
-    document.querySelector('.cvc').oninput = () =>{
-      document.querySelector('.cvc-output').innerText = document.querySelector('.cvc').value;
-    }
-    
-  </script>
-  <!-- Completed state start --> 
+<!--Java script file linked-->
+  <script src="script/script.js"></script>
+<!--Java script file linked-->
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Yefree De Los Santos</a>.
   </footer>
 </body>
 </html>

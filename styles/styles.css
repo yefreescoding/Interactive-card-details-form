@@ -11,6 +11,7 @@
 * {
   box-sizing: border-box;
   /*border: 1px grey solid;*/
+  margin: 0;
 }
 
 html {
@@ -219,8 +220,12 @@ div.form-section form div button:hover {
     gap: 1em 0;
   }
 }
+div.form-section.display-hide {
+  display: none;
+}
+
 div.complete-section {
-  display: flex;
+  display: none;
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -248,4 +253,20 @@ div.complete-section button.button-continue {
 div.complete-section button.button-continue:hover {
   letter-spacing: 2px;
   opacity: 0.8;
+}
+
+div.complete-section.display-success {
+  display: flex;
+}
+
+.error {
+  display: none;
+  width: 100%;
+  color: #af4242;
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+
+.error.display-error {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */

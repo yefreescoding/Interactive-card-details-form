@@ -12,7 +12,9 @@ $VeryDarkViolet: hsl(278, 68%, 11%);
 * {
   box-sizing: border-box;
   /*border: 1px grey solid;*/
+  margin: 0;
 }
+
 html {
   font-size: 100%;
 }
@@ -106,10 +108,7 @@ div.cards-section {
     }
   }
 }
-
-
 // styles for the right section:
-
 div.form-section {
   padding: 0 1%;
   background-color: $white;
@@ -199,7 +198,6 @@ div.form-section {
 
 
 @media (max-width:900px){
-
   html{
     font-size: 75%;
   }
@@ -243,9 +241,12 @@ div.form-section {
 
 }
 
+div.form-section.display-hide {
+  display: none;
+}
 
 div.complete-section {
-  display: flex;
+  display: none;
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -277,4 +278,20 @@ div.complete-section {
     letter-spacing: 2px;
     opacity: .8;
   }
+}
+
+div.complete-section.display-success {
+  display: flex;
+}
+
+.error {
+  display: none;
+  width: 100%;
+  color: #af4242;
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+
+.error.display-error {
+  display: block;
 }
